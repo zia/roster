@@ -1,0 +1,40 @@
+2017-02-19 18:09:39 Warning: Warning (512): Association property name "section" clashes with field of same name of table "clss". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\ORM\Association.php, line 722]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 722
+Cake\ORM\Association::property() - CORE\src\ORM\Association.php, line 744
+Bake\Shell\Task\ModelTask::getEntityPropertySchema() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 515
+Bake\Shell\Task\ModelTask::getTableContext() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 132
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 110
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 97
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 257
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 260
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 458
+Cake\Console\ShellDispatcher::_dispatch() - CORE\src\Console\ShellDispatcher.php, line 227
+Cake\Console\ShellDispatcher::dispatch() - CORE\src\Console\ShellDispatcher.php, line 182
+Cake\Console\ShellDispatcher::run() - CORE\src\Console\ShellDispatcher.php, line 128
+[main] - ROOT\bin\cake.php, line 34
+
+
+
+2017-02-19 18:10:23 Warning: Warning (512): Association property name "section" clashes with field of same name of table "clss". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\ORM\Association.php, line 722]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 722
+Cake\ORM\Association::property() - CORE\src\ORM\Association.php, line 744
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT\vendor\cakephp\bake\src\Utility\Model\AssociationFilter.php, line 96
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 477
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 298
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 148
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 259
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 260
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 458
+Cake\Console\ShellDispatcher::_dispatch() - CORE\src\Console\ShellDispatcher.php, line 227
+Cake\Console\ShellDispatcher::dispatch() - CORE\src\Console\ShellDispatcher.php, line 182
+Cake\Console\ShellDispatcher::run() - CORE\src\Console\ShellDispatcher.php, line 128
+[main] - ROOT\bin\cake.php, line 34
+
+
+
