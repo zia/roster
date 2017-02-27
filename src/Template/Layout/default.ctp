@@ -61,6 +61,7 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                 <li><?=$this->Html->link('Stuffs','/stuffs')?></li>
                 <li><?=$this->Html->link('Subjects','/subjects')?></li>
                 <li><?=$this->Html->link('Teachers','/teachers')?></li>
+                <li><?=$this->Html->link('Notices','/notices')?></li>
             </ul>
             <ul class="right">
                <li><?=$this->Html->link('Log Out','#')?></li> 

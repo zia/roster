@@ -63,4 +63,8 @@ Router::scope('/teachers', function($routes){
     $routes->connect('/',['controller' => 'teachers']);
 });
 
+Router::scope('/notices', function($routes){
+    $routes->connect('/',['controller' => 'notices']);
+});
+
 Plugin::routes();
