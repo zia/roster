@@ -26,6 +26,10 @@
             <td><?= h($student->name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($student->password) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Cls') ?></th>
             <td><?= $student->has('cls') ? $this->Html->link($student->cls->name, ['controller' => 'Clss', 'action' => 'view', $student->cls->id]) : '' ?></td>
         </tr>
@@ -40,6 +44,10 @@
         <tr>
             <th scope="row"><?= __('Age') ?></th>
             <td><?= $this->Number->format($student->age) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Gender') ?></th>
+            <td><?= $this->Number->format($student->gender) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

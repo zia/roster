@@ -30,11 +30,15 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('password') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('age') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('gender') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('class_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('teacher_id') ?></th>
+                <!--
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                -->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -43,11 +47,35 @@
             <tr>
                 <td><?= $this->Number->format($student->id) ?></td>
                 <td><?= h($student->name) ?></td>
+                <!--<td><?= h($student->password) ?></td>-->
                 <td><?= $this->Number->format($student->age) ?></td>
-                <td><?= $student->has('cls') ? $this->Html->link($student->cls->name, ['controller' => 'Clss', 'action' => 'view', $student->cls->id]) : '' ?></td>
+                <td>
+                    <!-- <?= $this->Number->format($student->gender) ?> -->
+                    <?= $this->Number->format($student->gender) ? 'Male' : 'Female'?>
+                </td>
+                <td>
+                    <?php
+                        switch ($this->Number->format($student->cls->section)) {
+                            case 1:
+                                $sect = 'A';
+                                break;
+                            case 2:
+                                $sect = 'B';
+                                break;
+                            case 3:
+                                $sect = 'C';
+                                break;
+                            default:
+                                $sect = 'D';
+                        }
+                    ?>
+                    <?= $student->has('cls') ? $this->Html->link($student->cls->name.'-'.$sect, ['controller' => 'Clss', 'action' => 'view', $student->cls->id]) : '' ?>
+                </td>
                 <td><?= $student->has('teacher') ? $this->Html->link($student->teacher->name, ['controller' => 'Teachers', 'action' => 'view', $student->teacher->id]) : '' ?></td>
+                <!--
                 <td><?= h($student->created) ?></td>
                 <td><?= h($student->modified) ?></td>
+                -->
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $student->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $student->id]) ?>

@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\BelongsTo $Clss
  * @property \Cake\ORM\Association\BelongsTo $Subjects
+ * @property \Cake\ORM\Association\HasMany $Notices
  * @property \Cake\ORM\Association\HasMany $Rosters
  * @property \Cake\ORM\Association\HasMany $Students
  * @property \Cake\ORM\Association\HasMany $Stuffs
@@ -50,6 +51,9 @@ class TeachersTable extends Table
         $this->belongsTo('Subjects', [
             'foreignKey' => 'subject_id'
         ]);
+        $this->hasMany('Notices', [
+            'foreignKey' => 'teacher_id'
+        ]);
         $this->hasMany('Rosters', [
             'foreignKey' => 'teacher_id'
         ]);
@@ -76,6 +80,13 @@ class TeachersTable extends Table
         $validator
             ->requirePresence('name', 'create')
             ->notEmpty('name');
+
+        $validator
+            ->allowEmpty('phone');
+
+        $validator
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
 
         return $validator;
     }

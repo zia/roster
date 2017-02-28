@@ -626,3 +626,39 @@ Stack Trace:
 #13 {main}
 
 
+2017-02-28 04:41:19 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 143]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-02-28 04:41:21 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 143)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-02-28 04:47:22 Error: Fatal Error (1): Class 'App\Model\Entity\DefaultPasswordHasher' not found in [C:\xampp\htdocs\school\src\Model\Entity\Student.php, line 51]
+Request URL: /students/edit/26
+Referer URL: http://localhost/school/students/edit/26
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-02-28 04:47:23 Error: [Cake\Error\FatalErrorException] Class 'App\Model\Entity\DefaultPasswordHasher' not found
+Request URL: /students/edit/26
+Referer URL: http://localhost/school/students/edit/26
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Mode...', 'C:\\xampp\\htdocs...', 51)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

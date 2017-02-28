@@ -21,7 +21,9 @@
         <legend><?= __('Add Student') ?></legend>
         <?php
             echo $this->Form->input('name');
+            echo $this->Form->input('password');
             echo $this->Form->input('age');
+            echo $this->Form->input('gender');
             echo $this->Form->input('class_id', ['options' => $clss]);
             echo $this->Form->input('teacher_id', ['options' => $teachers, 'empty' => true]);
         ?>

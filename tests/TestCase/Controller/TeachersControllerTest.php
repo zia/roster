@@ -18,12 +18,12 @@ class TeachersControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.teachers',
         'app.clss',
-        'app.sections',
         'app.rooms',
+        'app.stuffs',
         'app.subjects',
         'app.rosters',
-        'app.students',
-        'app.stuffs'
+        'app.attendences',
+        'app.students'
     ];
 
     /**

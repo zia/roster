@@ -30,6 +30,14 @@
             <td><?= h($teacher->name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Phone') ?></th>
+            <td><?= h($teacher->phone) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($teacher->password) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Cls') ?></th>
             <td><?= $teacher->has('cls') ? $this->Html->link($teacher->cls->name, ['controller' => 'Clss', 'action' => 'view', $teacher->cls->id]) : '' ?></td>
         </tr>
@@ -58,6 +66,7 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Class Id') ?></th>
                 <th scope="col"><?= __('Teacher Id') ?></th>
+                <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -67,6 +76,7 @@
                 <td><?= h($rosters->id) ?></td>
                 <td><?= h($rosters->class_id) ?></td>
                 <td><?= h($rosters->teacher_id) ?></td>
+                <td><?= h($rosters->description) ?></td>
                 <td><?= h($rosters->created) ?></td>
                 <td><?= h($rosters->modified) ?></td>
                 <td class="actions">
@@ -86,7 +96,9 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
+                <th scope="col"><?= __('Password') ?></th>
                 <th scope="col"><?= __('Age') ?></th>
+                <th scope="col"><?= __('Gender') ?></th>
                 <th scope="col"><?= __('Class Id') ?></th>
                 <th scope="col"><?= __('Teacher Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
@@ -97,7 +109,9 @@
             <tr>
                 <td><?= h($students->id) ?></td>
                 <td><?= h($students->name) ?></td>
+                <td><?= h($students->password) ?></td>
                 <td><?= h($students->age) ?></td>
+                <td><?= h($students->gender) ?></td>
                 <td><?= h($students->class_id) ?></td>
                 <td><?= h($students->teacher_id) ?></td>
                 <td><?= h($students->created) ?></td>
@@ -123,7 +137,7 @@
                 <th scope="col"><?= __('Gender') ?></th>
                 <th scope="col"><?= __('Designation') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Class Id') ?></th>
+                <th scope="col"><?= __('Room Id') ?></th>
                 <th scope="col"><?= __('Teacher Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
@@ -137,7 +151,7 @@
                 <td><?= h($stuffs->gender) ?></td>
                 <td><?= h($stuffs->designation) ?></td>
                 <td><?= h($stuffs->description) ?></td>
-                <td><?= h($stuffs->class_id) ?></td>
+                <td><?= h($stuffs->room_id) ?></td>
                 <td><?= h($stuffs->teacher_id) ?></td>
                 <td><?= h($stuffs->created) ?></td>
                 <td><?= h($stuffs->modified) ?></td>

@@ -12,8 +12,16 @@
     </ul>
 </nav>
 <div class="notices index large-9 medium-8 columns content">
-    <h3><?= __('Notices') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <h3 class="large-8 medium-8 columns"><?= __('Notices') ?></h3>
+    <div class="large-4 medium-4 columns">
+        <?php
+            #lookup() method is in webroot/filter_table.js
+            echo $this->Form->create();
+            echo $this->Form->control('term', ['label' => false, 'placeholder' => 'Search', 'onkeyup' => 'lookUp()']);
+            echo $this->Form->end();
+        ?>
+    </div>
+    <table cellpadding="0" cellspacing="0" id="dataTable">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>

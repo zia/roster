@@ -34,6 +34,8 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('class_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subject_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -46,6 +48,8 @@
             <tr>
                 <td><?= $this->Number->format($teacher->id) ?></td>
                 <td><?= h($teacher->name) ?></td>
+                <td><?= h($teacher->phone) ?></td>
+                <td><?= h($teacher->password) ?></td>
                 <td><?= $teacher->has('cls') ? $this->Html->link($teacher->cls->name, ['controller' => 'Clss', 'action' => 'view', $teacher->cls->id]) : '' ?></td>
                 <td><?= $teacher->has('subject') ? $this->Html->link($teacher->subject->name, ['controller' => 'Subjects', 'action' => 'view', $teacher->subject->id]) : '' ?></td>
                 <td><?= h($teacher->created) ?></td>

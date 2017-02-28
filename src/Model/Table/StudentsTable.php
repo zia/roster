@@ -71,9 +71,18 @@ class StudentsTable extends Table
             ->notEmpty('name');
 
         $validator
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
+
+        $validator
             ->integer('age')
             ->requirePresence('age', 'create')
             ->notEmpty('age');
+
+        $validator
+            ->integer('gender')
+            ->requirePresence('gender', 'create')
+            ->notEmpty('gender');
 
         return $validator;
     }

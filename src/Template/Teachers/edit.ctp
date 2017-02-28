@@ -31,6 +31,8 @@
         <legend><?= __('Edit Teacher') ?></legend>
         <?php
             echo $this->Form->input('name');
+            echo $this->Form->input('phone');
+            echo $this->Form->input('password');
             echo $this->Form->input('class_id', ['options' => $clss, 'empty' => true]);
             echo $this->Form->input('subject_id', ['options' => $subjects, 'empty' => true]);
         ?>
