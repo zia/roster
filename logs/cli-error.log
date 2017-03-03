@@ -88,3 +88,15 @@ Stack Trace:
 #17 {main}
 
 
+2017-03-03 15:35:54 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Migration" could not be found.
+Exception Attributes: array (
+  'class' => 'Migration',
+)
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(223): Cake\Console\ShellDispatcher->findShell('migration')
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\xampp\htdocs\school\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+

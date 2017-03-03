@@ -61,7 +61,12 @@ class RostersController extends AppController
             }
             $this->Flash->error(__('The roster could not be saved. Please, try again.'));
         }
-        $clss = $this->Rosters->Clss->find('list', ['limit' => 200]);
+        //$clss = $this->Rosters->Clss->find('list', ['limit' => 200]);
+
+        //$clss = $this->Rosters->Clss->find('list', ['fields' => array('id','section'),'limit' => 200]);
+
+        $clss = $this->Rosters->Clss->find()->combine('id', 'name', 'section')->toArray();
+
         $teachers = $this->Rosters->Teachers->find('list', ['limit' => 200]);
         $this->set(compact('roster', 'clss', 'teachers'));
         $this->set('_serialize', ['roster']);

@@ -28,3 +28,9 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+<div>
+    <?php
+        print_r($clss);
+        echo $clss[0][0][0];
+    ?>
+</div>
