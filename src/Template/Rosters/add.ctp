@@ -31,6 +31,5 @@
 <div>
     <?php
         print_r($clss);
-        echo $clss[0][0][0];
     ?>
 </div>
