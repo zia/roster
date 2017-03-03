@@ -18,6 +18,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Notice patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Notice[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Notice findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class NoticesTable extends Table
 {
@@ -35,6 +37,8 @@ class NoticesTable extends Table
         $this->table('notices');
         $this->displayField('title');
         $this->primaryKey('id');
+
+        $this->addBehavior('Timestamp');
 
         $this->belongsTo('Teachers', [
             'foreignKey' => 'teacher_id'

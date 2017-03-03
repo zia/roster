@@ -31,7 +31,7 @@
                 <th scope="col"><?= $this->Paginator->sort('student_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('roster_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('modified') ?></th>-->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -46,7 +46,7 @@
                 <td><?= $attendence->has('student') ? $this->Html->link($attendence->student->name, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?></td>
                 <td><?= $attendence->has('roster') ? $this->Html->link($attendence->roster->id, ['controller' => 'Rosters', 'action' => 'view', $attendence->roster->id]) : '' ?></td>
                 <td><?= h($attendence->created) ?></td>
-                <td><?= h($attendence->modified) ?></td>
+                <!--<td><?= h($attendence->modified) ?></td>-->
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $attendence->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $attendence->id]) ?>

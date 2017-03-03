@@ -33,5 +33,13 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($notice->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($notice->created) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Modified') ?></th>
+            <td><?= h($notice->modified) ?></td>
+        </tr>
     </table>
 </div>

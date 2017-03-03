@@ -662,3 +662,56 @@ Stack Trace:
 #2 {main}
 
 
+2017-02-28 15:17:09 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Database\Statement\BufferResultsTrait.php, line 23]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-02-28 15:17:14 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-03-03 03:37:06 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\school\vendor\composer\ClassLoader.php, line 380]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-03-03 03:37:21 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 380)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-03-03 10:23:03 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\school\src\Template\Rosters\add.ctp, line 25]
+Request URL: /rosters/add
+Referer URL: http://localhost/school/rosters
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-03-03 10:23:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /rosters/add
+Referer URL: http://localhost/school/rosters
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

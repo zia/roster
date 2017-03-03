@@ -7,8 +7,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Rosters'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Clss'), ['controller' => 'Clss', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Cls'), ['controller' => 'Clss', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Classes'), ['controller' => 'Clss', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Class'), ['controller' => 'Clss', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Teachers'), ['controller' => 'Teachers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Teacher'), ['controller' => 'Teachers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Attendences'), ['controller' => 'Attendences', 'action' => 'index']) ?></li>
@@ -22,7 +22,7 @@
         <?php
             echo $this->Form->input('class_id', ['options' => $clss]);
             echo $this->Form->input('teacher_id', ['options' => $teachers, 'empty' => true]);
-            echo $this->Form->input('description');
+            echo $this->Form->input('description',['type' => 'textarea']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

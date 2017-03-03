@@ -19,11 +19,28 @@
     </ul>
 </nav>
 <div class="rosters view large-9 medium-8 columns content">
-    <h3><?= h($roster->id) ?></h3>
+    <h3>Roster Id: <?= h($roster->id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Cls') ?></th>
-            <td><?= $roster->has('cls') ? $this->Html->link($roster->cls->name, ['controller' => 'Clss', 'action' => 'view', $roster->cls->id]) : '' ?></td>
+            <th scope="row"><?= __('Class') ?></th>
+            <td>
+                <?php
+                    switch ($this->Number->format($roster->cls->section)) {
+                        case 1:
+                            $sect = 'A';
+                            break;
+                        case 2:
+                            $sect = 'B';
+                            break;
+                        case 3:
+                            $sect = 'C';
+                            break;
+                        default:
+                            $sect = 'D';
+                    }
+                ?>
+                <?= $roster->has('cls') ? $this->Html->link($roster->cls->name.'-'.$sect, ['controller' => 'Clss', 'action' => 'view', $roster->cls->id]) : '' ?>
+            </td>
         </tr>
         <tr>
             <th scope="row"><?= __('Teacher') ?></th>
@@ -52,9 +69,9 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Status') ?></th>
                 <th scope="col"><?= __('Student Id') ?></th>
-                <th scope="col"><?= __('Roster Id') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
+                <!--<th scope="col"><?= __('Roster Id') ?></th>-->
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -62,9 +79,12 @@
             <?php foreach ($roster->attendences as $attendences): ?>
             <tr>
                 <td><?= h($attendences->id) ?></td>
-                <td><?= h($attendences->status) ?></td>
                 <td><?= h($attendences->student_id) ?></td>
-                <td><?= h($attendences->roster_id) ?></td>
+                <td>
+                    <!--<?= h($attendences->status) ?>-->
+                    <?=$this->Number->format($attendences->status) ? 'Present' : 'Absent';?>
+                </td>
+                <!--<td><?= h($attendences->roster_id) ?></td>-->
                 <td><?= h($attendences->created) ?></td>
                 <td><?= h($attendences->modified) ?></td>
                 <td class="actions">

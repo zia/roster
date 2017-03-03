@@ -7,8 +7,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Roster'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Clss'), ['controller' => 'Clss', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Cls'), ['controller' => 'Clss', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Classes'), ['controller' => 'Clss', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Class'), ['controller' => 'Clss', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Teachers'), ['controller' => 'Teachers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Teacher'), ['controller' => 'Teachers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Attendences'), ['controller' => 'Attendences', 'action' => 'index']) ?></li>
@@ -41,7 +41,24 @@
             <?php foreach ($rosters as $roster): ?>
             <tr>
                 <td><?= $this->Number->format($roster->id) ?></td>
-                <td><?= $roster->has('cls') ? $this->Html->link($roster->cls->name, ['controller' => 'Clss', 'action' => 'view', $roster->cls->id]) : '' ?></td>
+                <td>
+                    <?php
+                        switch ($this->Number->format($roster->cls->section)) {
+                            case 1:
+                                $sect = 'A';
+                                break;
+                            case 2:
+                                $sect = 'B';
+                                break;
+                            case 3:
+                                $sect = 'C';
+                                break;
+                            default:
+                                $sect = 'D';
+                        }
+                    ?>
+                    <?= $roster->has('cls') ? $this->Html->link($roster->cls->name.'-'.$sect, ['controller' => 'Clss', 'action' => 'view', $roster->cls->id]) : '' ?>
+                </td>
                 <td><?= $roster->has('teacher') ? $this->Html->link($roster->teacher->name, ['controller' => 'Teachers', 'action' => 'view', $roster->teacher->id]) : '' ?></td>
                 <td><?= h($roster->description) ?></td>
                 <td><?= h($roster->created) ?></td>

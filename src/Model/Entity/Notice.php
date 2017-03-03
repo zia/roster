@@ -10,6 +10,8 @@ use Cake\ORM\Entity;
  * @property string $title
  * @property int $teacher_id
  * @property string $description
+ * @property \Cake\I18n\Time $created
+ * @property \Cake\I18n\Time $modified
  *
  * @property \App\Model\Entity\Teacher $teacher
  */

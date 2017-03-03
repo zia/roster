@@ -28,6 +28,8 @@
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('teacher_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('modified') ?></th>-->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -38,6 +40,8 @@
                 <td><?= h($notice->title) ?></td>
                 <td><?= $notice->has('teacher') ? $this->Html->link($notice->teacher->name, ['controller' => 'Teachers', 'action' => 'view', $notice->teacher->id]) : '' ?></td>
                 <td><?= h($notice->description) ?></td>
+                <td><?= h($notice->created) ?></td>
+                <!--<td><?= h($notice->modified) ?></td>-->
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $notice->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $notice->id]) ?>

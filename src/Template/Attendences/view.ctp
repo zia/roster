@@ -17,7 +17,7 @@
     </ul>
 </nav>
 <div class="attendences view large-9 medium-8 columns content">
-    <h3><?= h($attendence->id) ?></h3>
+    <h3>Attendence Id: <?= h($attendence->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Student') ?></th>
@@ -33,7 +33,10 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Status') ?></th>
-            <td><?= $this->Number->format($attendence->status) ?></td>
+            <td>
+                <!-- <?= $this->Number->format($attendence->status) ?> -->
+                <?=$this->Number->format($attendence->status) ? 'Present' : 'Absent';?>    
+            </td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
