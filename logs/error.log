@@ -1232,3 +1232,37 @@ Stack Trace:
 #13 {main}
 
 
+2017-03-04 10:45:34 Error: Fatal Error (4): syntax error, unexpected ')', expecting ':' or '{' in [C:\xampp\htdocs\school\src\Template\Rosters\add.ctp, line 35]
+Request URL: /rosters/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-03-04 10:45:35 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ':' or '{'
+Request URL: /rosters/add
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 35)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-03-04 12:38:27 Error: Fatal Error (4): syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in [C:\xampp\htdocs\school\src\Template\Rosters\add.ctp, line 43]
+Request URL: /rosters/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-03-04 12:38:28 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';'
+Request URL: /rosters/add
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 43)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -19,24 +19,41 @@
     <?= $this->Form->create($roster) ?>
     <fieldset>
         <legend><?= __('Add Roster') ?></legend>
+
+        <div class="input select">
+            <label for="class-id">Class</label>
+            <select name="class_id" id="class-id">
+                <?php
+                    foreach ($clss as $key => $value) {
+                        echo '<optgroup label="Section : ';
+                        switch ($key) {
+                            case 1:
+                                echo 'A';
+                                break;
+                            case 2:
+                                echo 'B';
+                                break;
+                            case 3:
+                                echo 'C';
+                                break;
+                            default:
+                                echo 'D';
+                        }
+                        echo '">';
+                        foreach ($value as $k => $v) {
+                            echo '<option value="'.$k.'">'.$v.'</option>';
+                        }
+                        echo '</optgroup>';
+                    }
+                ?>
+            </select>
+        </div>
         <?php
-            echo $this->Form->input('class_id', ['options' => $clss]);
+            //echo $this->Form->input('class_id', ['options' => $clss]);
             echo $this->Form->input('teacher_id', ['options' => $teachers, 'empty' => true]);
             echo $this->Form->input('description',['type' => 'textarea']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
-</div>
-<div>
-    <?php
-        //print_r($clss);
-        foreach ($clss as $key => $value) {
-            echo $key.'->';
-            foreach ($value as $k => $v) {
-                echo $k.'->'.$v.',';
-            }
-            echo '<br>';
-        }
-    ?>
 </div>
