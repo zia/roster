@@ -19,7 +19,6 @@ class StuffsControllerTest extends IntegrationTestCase
         'app.stuffs',
         'app.rooms',
         'app.clss',
-        'app.sections',
         'app.teachers',
         'app.subjects',
         'app.rosters',

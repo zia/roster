@@ -18,7 +18,6 @@ class RostersControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.rosters',
         'app.clss',
-        'app.sections',
         'app.rooms',
         'app.teachers',
         'app.subjects',

@@ -271,7 +271,7 @@ return [
             //'port' => 'non_standard_port_number',
             'username' => 'root',
             'password' => '',
-            'database' => 'sample_test',
+            'database' => 'test_sample_database',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,

@@ -100,3 +100,651 @@ Stack Trace:
 #4 {main}
 
 
+2017-03-04 00:48:15 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\SectionsFixture" not found. Fixture "app.sections" was referenced in test case "App\Test\TestCase\Controller\AttendencesControllerTest".
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(101): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\AttendencesControllerTest))
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(158): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\AttendencesControllerTest))
+#2 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(396): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\AttendencesControllerTest))
+#3 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(652): PHPUnit_Framework_TestResult->startTest(Object(App\Test\TestCase\Controller\AttendencesControllerTest))
+#4 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\AttendencesControllerTest))
+#5 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#7 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#8 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#9 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#10 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#11 {main}
+
+
+2017-03-04 00:59:28 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::home() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(50): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDisplay()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 00:59:29 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(64): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 00:59:29 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'notExisting',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(78): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 00:59:29 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::..() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => '..',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/../Layout/ajax
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(93): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 00:59:47 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\SectionsFixture" not found. Fixture "app.sections" was referenced in test case "App\Test\TestCase\Controller\RostersControllerTest".
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(101): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\RostersControllerTest))
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(158): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\RostersControllerTest))
+#2 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(396): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\RostersControllerTest))
+#3 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(652): PHPUnit_Framework_TestResult->startTest(Object(App\Test\TestCase\Controller\RostersControllerTest))
+#4 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\RostersControllerTest))
+#5 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#7 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#8 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#9 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#10 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#11 {main}
+
+
+2017-03-04 01:04:48 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::home() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(50): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDisplay()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 01:04:48 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(64): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 01:04:48 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'notExisting',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(78): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 01:04:48 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::..() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => '..',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/../Layout/ajax
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(93): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 01:12:06 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\SectionsFixture" not found. Fixture "app.sections" was referenced in test case "App\Test\TestCase\Model\Table\AttendencesTableTest".
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(101): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Model\Table\AttendencesTableTest))
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(158): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Model\Table\AttendencesTableTest))
+#2 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(396): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\AttendencesTableTest))
+#3 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(652): PHPUnit_Framework_TestResult->startTest(Object(App\Test\TestCase\Model\Table\AttendencesTableTest))
+#4 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Model\Table\AttendencesTableTest))
+#5 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#7 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#8 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#9 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#10 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#11 {main}
+
+
+2017-03-04 04:36:12 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::home() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(50): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDisplay()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 04:36:12 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(64): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 04:36:12 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'notExisting',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(78): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 04:36:13 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::..() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => '..',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/../Layout/ajax
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(93): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 07:00:06 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::home() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(50): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDisplay()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 07:00:06 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(64): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 07:00:06 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::notExisting() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'notExisting',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(78): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+
+2017-03-04 07:00:06 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::..() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => '..',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages/../Layout/ajax
+Stack Trace:
+#0 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\Http\Server.php(82): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#13 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(419): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#14 C:\xampp\htdocs\school\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(337): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#15 C:\xampp\htdocs\school\tests\TestCase\Controller\PagesControllerTest.php(93): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#16 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#17 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(1120): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#18 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(971): PHPUnit_Framework_TestCase->runTest()
+#19 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#20 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestCase.php(926): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#21 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#22 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\Framework\TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#23 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(521): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#25 C:\xampp\htdocs\school\vendor\phpunit\phpunit\src\TextUI\Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#26 C:\xampp\htdocs\school\vendor\phpunit\phpunit\phpunit(52): PHPUnit_TextUI_Command::main()
+#27 {main}
+
+

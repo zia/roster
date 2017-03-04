@@ -27,7 +27,6 @@ class StuffsTableTest extends TestCase
         'app.stuffs',
         'app.rooms',
         'app.clss',
-        'app.sections',
         'app.teachers',
         'app.subjects',
         'app.rosters',

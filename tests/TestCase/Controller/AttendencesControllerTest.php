@@ -19,7 +19,6 @@ class AttendencesControllerTest extends IntegrationTestCase
         'app.attendences',
         'app.students',
         'app.clss',
-        'app.sections',
         'app.rooms',
         'app.teachers',
         'app.subjects',

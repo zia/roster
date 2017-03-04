@@ -30,6 +30,13 @@
 </div>
 <div>
     <?php
-        print_r($clss);
+        //print_r($clss);
+        foreach ($clss as $key => $value) {
+            echo $key.'->';
+            foreach ($value as $k => $v) {
+                echo $k.'->'.$v.',';
+            }
+            echo '<br>';
+        }
     ?>
 </div>
