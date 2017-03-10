@@ -64,7 +64,7 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                 <li><?=$this->Html->link('Notices','/notices')?></li>
             </ul>
             <ul class="right">
-               <li><?=$this->Html->link('Log Out','#')?></li> 
+               <li><?=$this->Html->link('Log Out',['controller' => 'users', 'action' => 'logout'])?></li>
             </ul>
         </div>
     </nav>

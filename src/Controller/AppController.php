@@ -62,6 +62,9 @@ class AppController extends Controller
         
         // Allow the display action so our pages controller continues to work.
         $this->Auth->allow(['display']);
+
+        //Allow Log outs
+        $this->Auth->allow(['logout']);
         
         /*
          * Enable the following components for recommended CakePHP security settings.
