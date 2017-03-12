@@ -16,30 +16,36 @@
     </ul>
 </nav>
 <div class="students index large-9 medium-8 columns content">
-    <h3 class="large-8 medium-8 columns"><?= __('Students') ?></h3>
-    <div class="large-4 medium-4 columns">
-        <?php
-            #lookup() method is in webroot/filter_table.js
-            echo $this->Form->create();
-            echo $this->Form->control('term', ['label' => false, 'placeholder' => 'Search', 'onkeyup' => 'lookUp()']);
-            echo $this->Form->end();
-        ?>
-    </div>
+    <h3><?= __('Students') ?></h3>
     <table cellpadding="0" cellspacing="0" id="dataTable">
         <thead>
             <tr>
+                <!-- Cake Default
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <!--<th scope="col"><?= $this->Paginator->sort('password') ?></th>-->
+                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('age') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('class_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('teacher_id') ?></th>
-                <!--
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                -->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
+                -->
+
+                <!-- For Data Tables -->
+                <th>Id</th>
+                <th>Name</th>
+                <!--<th>Password</th>-->
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Class Id</th>
+                <th>Teacher Id</th>
+                <!--
+                <th>Created</th>
+                <th>Modified</th>
+                -->
+                <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -85,6 +91,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <!-- cakephp pagination
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->first('<< ' . __('first')) ?>
@@ -95,4 +102,6 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
+    -->
+
 </div>

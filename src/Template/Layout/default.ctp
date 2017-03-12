@@ -29,11 +29,20 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
 
+    <!-- Removed, But kept for future example ! -->
+    <!--
     <?= $this->Html->script('filter_table')?>
+    -->
     
     <!-- Angular
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -72,7 +81,19 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
+    <br>
     <footer>
+        <div class="panel">
+            <p>&copy; Free &#64; <?=date('Y')?>. Developed by <?=$this->Html->link('Zia','https://github.com/zia')?></p>
+        </div>
     </footer>
+
+    <!-- Data Tables JS -->
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('#dataTable').DataTable();
+        } );
+    </script>
 </body>
 </html>

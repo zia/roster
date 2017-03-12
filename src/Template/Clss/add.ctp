@@ -17,7 +17,18 @@
         <legend><?= __('Add Class') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('section');
+            //echo $this->Form->input('section');
+        ?>
+        <div class="input select">
+            <label for="section">Section</label>
+            <select name="section" id="section">
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+            </select>
+        </div>
+        <?php
             echo $this->Form->input('room_id', ['options' => $rooms, 'empty' => true]);
             echo $this->Form->input('batch');
         ?>

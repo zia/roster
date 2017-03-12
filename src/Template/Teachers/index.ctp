@@ -20,27 +20,34 @@
     </ul>
 </nav>
 <div class="teachers index large-9 medium-8 columns content">
-    <h3 class="large-8 medium-8 columns"><?= __('Teachers') ?></h3>
-    <div class="large-4 medium-4 columns">
-        <?php
-            #lookup() method is in webroot/filter_table.js
-            echo $this->Form->create();
-            echo $this->Form->control('term', ['label' => false, 'placeholder' => 'Search', 'onkeyup' => 'lookUp()']);
-            echo $this->Form->end();
-        ?>
-    </div>
+    <h3><?= __('Teachers') ?></h3>
     <table cellpadding="0" cellspacing="0" id="dataTable">
         <thead>
             <tr>
+                <!-- Cake Default
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                <!--<th scope="col"><?= $this->Paginator->sort('password') ?></th>-->
+                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('class_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subject_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <!--<th scope="col"><?= $this->Paginator->sort('modified') ?></th>-->
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
+                -->
+
+                <!-- For Data Tables -->
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <!--<th>Password</th>-->
+                <th>Class Id</th>
+                <th>Subject Id</th>
+                <th>Created</th>
+                <!--<th>Modified</th>-->
+                <th class="actions"><?= __('Actions') ?></th>
+
+
             </tr>
         </thead>
         <tbody>
