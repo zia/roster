@@ -88,4 +88,15 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
+
+    public function beforeFilter(Event $event){
+        if($this->request->session()->read('Auth.User')){
+            $this->set('loggedIn',true);
+        }
+        else{
+            $this->set('loggedIn',false);
+        }
+
+        //$this->request->session()->read('Auth.User') ? $this->set('loggedIn',true) : $this->set('loggedIn',false);
+    }
 }
