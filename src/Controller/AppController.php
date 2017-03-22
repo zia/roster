@@ -71,7 +71,7 @@ class AppController extends Controller
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+        $this->loadComponent('Csrf');
     }
 
     /**
@@ -88,6 +88,13 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
+
+    /**
+     * Before authorization callback.
+     *
+     * @param \Cake\Event\Event $event The beforeFilter event.
+     * @return \Cake\Network\Response|null|void
+     */
 
     public function beforeFilter(Event $event){
         if($this->request->session()->read('Auth.User')){

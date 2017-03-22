@@ -56,15 +56,13 @@ class RostersController extends AppController
             $roster = $this->Rosters->patchEntity($roster, $this->request->data);
             if ($this->Rosters->save($roster)) {
                 $this->Flash->success(__('The roster has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Attendences','action' => 'add']);
             }
             $this->Flash->error(__('The roster could not be saved. Please, try again.'));
         }
         //$clss = $this->Rosters->Clss->find('list', ['limit' => 200]);
-
-        //$clss = $this->Rosters->Clss->find('list', ['fields' => array('id','section'),'limit' => 200]);
-
+        //$clss = $this->Rosters->Clss->find('list', ['keyField' => 'id','valueField' => array('name','section'),'limit' => 200]);
+        
         $clss = $this->Rosters->Clss->find()->combine('id', 'name', 'section')->toArray();
 
         $teachers = $this->Rosters->Teachers->find('list', ['limit' => 200]);

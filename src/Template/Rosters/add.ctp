@@ -19,10 +19,10 @@
     <?= $this->Form->create($roster) ?>
     <fieldset>
         <legend><?= __('Add Roster') ?></legend>
-
         <div class="input select">
             <label for="class-id">Class</label>
             <select name="class_id" id="class-id">
+                <option value></option>
                 <?php
                     foreach ($clss as $key => $value) {
                         echo '<optgroup label="Section : ';

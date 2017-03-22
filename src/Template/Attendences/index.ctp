@@ -31,7 +31,7 @@
                 <!-- For Data Tables -->
                 <th>id</th>
                 <th>status</th>
-                <th>student_id</th>
+                <th>Student</th>
                 <th>roster_id</th>
                 <th>created</th>
                 <!--<th>modified</th>-->

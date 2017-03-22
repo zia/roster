@@ -18,8 +18,8 @@ class RoomsController extends AppController
      */
     public function index()
     {
+        $this->paginate = array('limit'=>200);
         $rooms = $this->paginate($this->Rooms);
-
         $this->set(compact('rooms'));
         $this->set('_serialize', ['rooms']);
     }

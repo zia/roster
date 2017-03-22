@@ -14,15 +14,57 @@
     </ul>
 </nav>
 <div class="attendences form large-9 medium-8 columns content">
+    <h3><?= __('Commit') ?></h3>
+    <div class="panel primary">
+        <pre><?= __('Roster Id: ') ?></pre>
+        <pre><?= __('Class: ') ?></pre>
+        <pre><?= __('Date: ') ?></pre>
+        <pre><?= __('Teacher: ') ?></pre>
+        <pre><?= __('Description: ') ?></pre>
+    </div>
+
     <?= $this->Form->create($attendence) ?>
     <fieldset>
         <legend><?= __('Add Attendence') ?></legend>
         <?php
-            echo $this->Form->input('status');
-            echo $this->Form->input('student_id', ['options' => $students]);
-            echo $this->Form->input('roster_id', ['options' => $rosters]);
+            #There will be a loop required
+            #echo $this->Form->radio('status', ['Absent','Present']);
+            #echo $this->Form->input('status');
+            #echo $this->Form->input('student_id', ['options' => $students]);
+            #echo $this->Form->input('roster_id', ['options' => $rosters]);
         ?>
+        <table cellpadding="0" cellspacing="0" id="dataTable">
+            <thead>
+                <tr>
+                    <!-- For Data Tables -->
+                    <th>Id</th>
+                    <th>Student Name</th>
+                    <th class="actions"><?= __('Actions') ?></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($attendences as $attendence) {
+                ?>
+                <tr>
+                    <td><?= $this->Number->format($attendence->id) ?></td>
+                    <td>
+                        <?= $attendence->has('student') ? $this->Html->link($attendence->student->name, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?>
+                        (<?= $attendence->has('student') ? $this->Html->link($attendence->student->id, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?>)
+                    </td>
+                    <td>
+                        <?=$this->Form->input($attendence->student->id.'_status', ['type' => 'checkbox', 'required' => '', 'value' => 0, 'label' => 'Absent?'])?>
+
+                        <?=$this->Form->hidden('student_id',['value' => $this->Number->format($attendence->student->id)])?>   
+                    </td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </tbody>
+        </table>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Save')) ?>
     <?= $this->Form->end() ?>
 </div>

@@ -15,10 +15,7 @@
     <?= $this->Form->create($cls) ?>
     <fieldset>
         <legend><?= __('Add Class') ?></legend>
-        <?php
-            echo $this->Form->input('name');
-            //echo $this->Form->input('section');
-        ?>
+        <?=$this->Form->input('name')?>
         <div class="input select">
             <label for="section">Section</label>
             <select name="section" id="section">

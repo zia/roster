@@ -51,20 +51,32 @@ class AttendencesController extends AppController
      */
     public function add()
     {
+        print_r($roster);
+        exit();
+        #This Is For Saving
         $attendence = $this->Attendences->newEntity();
         if ($this->request->is('post')) {
             $attendence = $this->Attendences->patchEntity($attendence, $this->request->data);
             if ($this->Attendences->save($attendence)) {
                 $this->Flash->success(__('The attendence has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The attendence could not be saved. Please, try again.'));
         }
-        $students = $this->Attendences->Students->find('list', ['limit' => 200]);
+
+        #This is for getting lists
+        #$students = $this->Attendences->Students->find('list', ['limit' => 200]);
+        #students will be according to the roster,for instance a roster is for a class and classes have students.
+        $students = $this->Attendences->Students->find('all');
+        #I'll get only the specific roster later
         $rosters = $this->Attendences->Rosters->find('list', ['limit' => 200]);
-        $this->set(compact('attendence', 'students', 'rosters'));
-        $this->set('_serialize', ['attendence']);
+
+        $this->paginate = [
+            'contain' => ['Students', 'Rosters']
+        ];
+        $attendences = $this->paginate($this->Attendences);
+        $this->set(compact('attendence','attendences', 'students', 'rosters'));
+        $this->set('_serialize', ['attendences']);
     }
 
     /**

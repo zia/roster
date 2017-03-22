@@ -51,17 +51,18 @@ class ClssController extends AppController
      */
     public function add()
     {
+        
+
         $cls = $this->Clss->newEntity();
         if ($this->request->is('post')) {
             $cls = $this->Clss->patchEntity($cls, $this->request->data);
             if ($this->Clss->save($cls)) {
                 $this->Flash->success(__('The cls has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The cls could not be saved. Please, try again.'));
         }
-        $rooms = $this->Clss->Rooms->find('list', ['limit' => 200]);
+        $rooms = $this->Clss->Rooms->find('list', ['keyField' => 'id','valueField' => array('name','description'),'limit' => 200]);
         $this->set(compact('cls', 'rooms'));
         $this->set('_serialize', ['cls']);
     }

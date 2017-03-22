@@ -27,7 +27,7 @@ Router::defaultRouteClass(DashedRoute::class);
 
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->extensions(['json']);
-    $routes->connect('/', ['controller' => 'Rosters', 'action' => 'index', 'home']);
+    $routes->connect('/', ['controller' => 'Rosters', 'action' => 'add', 'home']);
     $routes->fallbacks(DashedRoute::class);
 });
 

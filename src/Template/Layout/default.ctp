@@ -57,11 +57,8 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
             </li>
         </ul>
         <div class="top-bar-section">
+            <?php if($loggedIn){?>
             <ul class="left">
-                <!-- 
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-                -->
                 <li><?=$this->Html->link('Attendences','/attendences')?></li>
                 <li><?=$this->Html->link('Classes','/classes')?></li>
                 <li><?=$this->Html->link('Rooms','/rooms')?></li>
@@ -73,12 +70,9 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                 <li><?=$this->Html->link('Notices','/notices')?></li>
             </ul>
             <ul class="right">
-               <li>
-                    <?php if($loggedIn){?>
-                        <?=$this->Html->link('Log Out',['controller' => 'users', 'action' => 'logout'])?>
-                    <?php } ?>
-               </li>
+               <li><?=$this->Html->link('Log Out','/users/logout')?></li>
             </ul>
+            <?php } ?>
         </div>
     </nav>
     <?= $this->Flash->render() ?>
@@ -88,7 +82,7 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     <br>
     <footer>
         <div class="panel">
-            <p>&copy; Free &#64; <?=date('Y')?>. Developed by <?=$this->Html->link('Zia','https://github.com/zia')?></p>
+            <p class="text-center">&copy; Free &#64; <?=date('Y')?>. Developed by <?=$this->Html->link('Zia','https://github.com/zia')?></p>
         </div>
     </footer>
 
@@ -96,7 +90,9 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
     <script type="text/javascript">
         $(document).ready( function () {
-            $('#dataTable').DataTable();
+            $('#dataTable').dataTable({
+                
+            });
         } );
     </script>
 </body>
