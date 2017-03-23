@@ -26,20 +26,20 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('msg-slider.css')?>
+    <?= $this->Html->css('font-awesome.css')?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
 
-    <!-- Removed, But kept for future example ! -->
-    <!--
-    <?= $this->Html->script('filter_table')?>
-    -->
+    <?= $this->Html->script('ga')?>
+    <?= $this->Html->script('msg-slider')?>
     
     <!-- Angular
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     -->
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <?=$this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')?>
 
     <!-- Data Tables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/af-2.1.3/b-1.2.4/b-colvis-1.2.4/b-html5-1.2.4/b-print-1.2.4/cr-1.3.2/fh-3.1.2/kt-2.2.0/rr-1.2.0/sc-1.4.2/se-1.2.0/datatables.min.css"/>
@@ -59,18 +59,24 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
         <div class="top-bar-section">
             <?php if($loggedIn){?>
             <ul class="left">
-                <li><?=$this->Html->link('Attendences','/attendences')?></li>
-                <li><?=$this->Html->link('Classes','/classes')?></li>
-                <li><?=$this->Html->link('Rooms','/rooms')?></li>
-                <li><?=$this->Html->link('Rosters','/rosters')?></li>
-                <li><?=$this->Html->link('Students','/students')?></li>
-                <li><?=$this->Html->link('Stuffs','/stuffs')?></li>
-                <li><?=$this->Html->link('Subjects','/subjects')?></li>
-                <li><?=$this->Html->link('Teachers','/teachers')?></li>
-                <li><?=$this->Html->link('Notices','/notices')?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-cubes"></i> Attendances'),'/attendences', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-users"></i> Classes'),'/classes', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-building"></i> Rooms'),'/rooms', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-list"></i> Rosters'),'/rosters', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-graduation-cap"></i> Students'),'/students', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-spin fa-cog"></i> Stuffs'),'/stuffs', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-book"></i> Subjects'),'/subjects', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-user-circle"></i> Teachers'),'/teachers', ['escape' => false])?></li>
+                <li><?=$this->Html->link(__('<i class="fa fa-flag"></i> Notices'),'/notices', ['escape' => false])?></li>
             </ul>
             <ul class="right">
-               <li><?=$this->Html->link('Log Out','/users/logout')?></li>
+                <li>
+                    <!--
+                    <?= $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out')).'Log Out', array('controller' => 'Users', 'action' => 'logout'), array('escape' => false)) ?>
+                    -->
+                    
+                    <?= $this->Html->link(__("<i class='fa fa-sign-out'></i> Log Out"), ['controller'=> 'Users','action' => 'logout'], ['escape' => false])?>
+               </li>
             </ul>
             <?php } ?>
         </div>
@@ -85,6 +91,28 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
             <p class="text-center">&copy; Free &#64; <?=date('Y')?>. Developed by <?=$this->Html->link('Zia','https://github.com/zia')?></p>
         </div>
     </footer>
+
+    <!-- Sliding Message Box -->
+    <div id="sld" style="right:-342px;z-index:9999">
+        <div id="sidebar" onclick="open_panel()">
+            <?=$this->Html->image('contact.png', ['alt' => 'Send Me A Message'])?>
+        </div>
+        <div id="msg-box">  
+            <h4>Contact Form</h4>
+            <p>This is my form.Please fill it out.It's awesome!</p>
+            <input type="text" name="dname" placeholder="Your Name">
+            <input type="text" name="demail" placeholder="Your Email">
+            <h4>Query type</h4>
+            <select>
+                <option>General Query</option>
+                <option>Presales</option>
+                <option>Technical</option>
+                <option>Others</option>
+            </select>
+            <textarea type="text" placeholder="message"></textarea><br>
+            <button>Send Message</button>   
+        </div>
+    </div>
 
     <!-- Data Tables JS -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/af-2.1.3/b-1.2.4/b-colvis-1.2.4/b-html5-1.2.4/b-print-1.2.4/cr-1.3.2/fh-3.1.2/kt-2.2.0/rr-1.2.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>

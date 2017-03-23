@@ -18,6 +18,7 @@ class StudentsController extends AppController
      */
     public function index()
     {
+        $this->paginate = array('limit'=>200);
         $this->paginate = [
             'contain' => ['Clss', 'Teachers']
         ];
