@@ -14,14 +14,29 @@
     </ul>
 </nav>
 <div class="attendences form large-9 medium-8 columns content">
-    <h3><?= __('Commit') ?></h3>
-    <div class="panel primary">
-        <pre><?= __('Roster Id: ') ?></pre>
-        <pre><?= __('Class: ') ?></pre>
-        <pre><?= __('Date: ') ?></pre>
-        <pre><?= __('Teacher: ') ?></pre>
-        <pre><?= __('Description: ') ?></pre>
-    </div>
+    <table class="vertical-table">
+        <tr>
+            <th scope="row"><?= __('Roster Id') ?></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Class') ?></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Date') ?></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Teacher') ?></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Description') ?></th>
+            <td></td>
+        </tr>
+    </table>
+    
 
     <?= $this->Form->create($attendence) ?>
     <fieldset>
@@ -39,6 +54,7 @@
                     <!-- For Data Tables -->
                     <th>Id</th>
                     <th>Student Name</th>
+                    <th>Student Id</th>
                     <th class="actions"><?= __('Actions') ?></th>
 
                 </tr>
@@ -51,7 +67,9 @@
                     <td><?= $this->Number->format($attendence->id) ?></td>
                     <td>
                         <?= $attendence->has('student') ? $this->Html->link($attendence->student->name, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?>
-                        (<?= $attendence->has('student') ? $this->Html->link($attendence->student->id, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?>)
+                    </td>
+                    <td>
+                        <?= $attendence->has('student') ? $this->Html->link($attendence->student->id, ['controller' => 'Students', 'action' => 'view', $attendence->student->id]) : '' ?>
                     </td>
                     <td>
                         <?=$this->Form->input($attendence->student->id.'_status', ['type' => 'checkbox', 'required' => '', 'value' => 0, 'label' => 'Absent?'])?>

@@ -51,8 +51,6 @@ class AttendencesController extends AppController
      */
     public function add()
     {
-        print_r($roster);
-        exit();
         #This Is For Saving
         $attendence = $this->Attendences->newEntity();
         if ($this->request->is('post')) {

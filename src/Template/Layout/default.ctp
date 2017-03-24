@@ -30,8 +30,6 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     <?= $this->Html->css('font-awesome.css')?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
-
-    <?= $this->Html->script('ga')?>
     <?= $this->Html->script('msg-slider')?>
     
     <!-- Angular
@@ -50,16 +48,26 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
 </head>
 <!--<body style="background-image: url('<?= $this->Url->image("bg.jpg") ?>');">-->
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+    <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
-        <div class="top-bar-section">
+        <section class="top-bar-section">
             <?php if($loggedIn){?>
             <ul class="left">
-                <li><?=$this->Html->link(__('<i class="fa fa-cubes"></i> Attendances'),'/attendences', ['escape' => false])?></li>
+                <li class="has-dropdown">
+                    <?=$this->Html->link(__('<i class="fa fa-cubes"></i> Attendances'),'#', ['escape' => false])?>
+                    <ul class="dropdown">
+                        <li>
+                            <?=$this->Html->link(__('<i class="fa fa-list"></i> List'),'/attendences', ['escape' => false])?>
+                        </li>
+                        <li class="active">
+                            <a href="#"><i class='fa fa-plus-square'></i> New</a>
+                        </li>
+                    </ul>
+                </li>
                 <li><?=$this->Html->link(__('<i class="fa fa-users"></i> Classes'),'/classes', ['escape' => false])?></li>
                 <li><?=$this->Html->link(__('<i class="fa fa-building"></i> Rooms'),'/rooms', ['escape' => false])?></li>
                 <li><?=$this->Html->link(__('<i class="fa fa-list"></i> Rosters'),'/rosters', ['escape' => false])?></li>
@@ -79,8 +87,9 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                </li>
             </ul>
             <?php } ?>
-        </div>
+        </section>
     </nav>
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
@@ -94,12 +103,12 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
 
     <!-- Sliding Message Box -->
     <div id="sld" style="right:-342px;z-index:9999">
-        <div id="sidebar" onclick="open_panel()">
+        <div id="sdb" onclick="open_panel()">
             <?=$this->Html->image('contact.png', ['alt' => 'Send Me A Message'])?>
         </div>
-        <div id="msg-box">  
+        <div id="msg-box">
             <h4>Contact Form</h4>
-            <p>This is my form.Please fill it out.It's awesome!</p>
+            <hr>
             <input type="text" name="dname" placeholder="Your Name">
             <input type="text" name="demail" placeholder="Your Email">
             <h4>Query type</h4>

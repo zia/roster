@@ -22,7 +22,7 @@ class StudentsController extends AppController
         $this->paginate = [
             'contain' => ['Clss', 'Teachers']
         ];
-        $students = $this->paginate($this->Students);
+        $students = $this->paginate($this->Students,['limit' => 200]);
 
         $this->set(compact('students'));
         $this->set('_serialize', ['students']);
