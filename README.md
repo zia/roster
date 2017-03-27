@@ -1,11 +1,11 @@
-# CakePHP Application Skeleton
+# CakePHP School Management Application
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
 
-A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.x.
+A project for conducting test,taking ateendances,managing assignments and peoples(Teachers,Students and Stuffs) related to the school. 
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+This project is incomplete and ongoing.Any improvisation is greatly appreciated. The source code can be found here: https://github.com/zia/school
 
 ## Installation
 

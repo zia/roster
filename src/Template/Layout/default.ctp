@@ -13,18 +13,14 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+    <!-- Floating contact box-->
     <?= $this->Html->css('msg-slider.css')?>
+    <!-- Font-awesome -->
     <?= $this->Html->css('font-awesome.css')?>
+
+    <!-- Default -->
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
-    <?= $this->Html->script('msg-slider')?>
-    
-    <!-- Angular
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    -->
-
-    <!-- JQuery -->
-    <?=$this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')?>
 
     <!-- Data Tables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/af-2.1.3/b-1.2.4/b-colvis-1.2.4/b-html5-1.2.4/b-print-1.2.4/cr-1.3.2/fh-3.1.2/kt-2.2.0/rr-1.2.0/sc-1.4.2/se-1.2.0/datatables.min.css"/>
@@ -51,7 +47,7 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                             <?=$this->Html->link(__('<i class="fa fa-list"></i> List'),'/attendences', ['escape' => false])?>
                         </li>
                         <li class="active">
-                            <a href="#"><i class='fa fa-plus-square'></i> New</a>
+                            <a href="http://google.com"><i class='fa fa-plus-square'></i> New</a>
                         </li>
                     </ul>
                 </li>
@@ -119,7 +115,13 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                                             </label>
                                         </div>
                                         <div class="small-9 columns">
-                                            <input type="text" name="name" placeholder="John Doe" required/>
+                                            <input type="text" pattern=".{3,}" class="error" name="name" placeholder="John Doe" required/>
+                                            <?php
+                                                $err = 0;
+                                                if($err){
+                                                    echo '<small class="error">Invalid Name</small>';
+                                                }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +136,7 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                                             </label>
                                         </div>
                                         <div class="small-9 columns">
-                                            <input type="email" name="email" placeholder="something@example.com" required />
+                                            <input type="email" name="email" placeholder="name@example.com" required />
                                         </div>
                                     </div>
                                 </div>
@@ -154,8 +156,17 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" value="Submit" class="button small">Send</button>
-                            <button type="button" value="Reset" class="button small alert">Reset</button>
+                            <div class="row">
+                                <div class="large-4 medium-4 small-4 columns">
+                                    <button class="button tiny" type="submit" style="float: left;">Send</button>
+                                </div>
+                                <div class="large-4 medium-4 small-4 columns">
+                                    <button class="button tiny alert" type="reset" style="float: right;">Reset</button>
+                                </div>
+                                <div class="large-4 medium-4 small-4 columns">
+                                    <button class="button tiny secondary" type="button" onclick="close_panel()" style="float: right;">Cancel</button>
+                                </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
@@ -163,6 +174,19 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
         </div>
     </div>
 
+    <!-- Angular
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    -->
+
+    <!-- JQuery -->
+    <?=$this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')?>
+
+    <!-- foundation js -->
+    <?= $this->Html->script('foundation')?>
+    <?= $this->Html->script('what-input')?>
+    
+    <!-- Floating contact box-->
+    <?= $this->Html->script('msg-slider')?>
     <!-- Data Tables JS -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/af-2.1.3/b-1.2.4/b-colvis-1.2.4/b-html5-1.2.4/b-print-1.2.4/cr-1.3.2/fh-3.1.2/kt-2.2.0/rr-1.2.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>
     <script type="text/javascript">

@@ -20,7 +20,7 @@
 
 #sdb{
 	position:absolute;
-	top:50px;
+	top:85px;
 	left:113px;
 	box-shadow: 0 0 8px gray;
 	opacity: 0.2;
@@ -33,7 +33,7 @@
 
 #sdb1{
 	position:absolute;
-	top:50px;
+	top:85px;
 	left:113px;
 	box-shadow: 0 0 8px gray;
 	cursor: pointer;
