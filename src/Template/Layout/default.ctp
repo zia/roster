@@ -1,17 +1,4 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 
 $cakeDescription = 'A School Management App Developed Using CakePHP';
 ?>
@@ -102,24 +89,77 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
     </footer>
 
     <!-- Sliding Message Box -->
-    <div id="sld" style="right:-342px;z-index:9999">
+    <div id="sld" style="right:-306px;z-index:9999">
         <div id="sdb" onclick="open_panel()">
             <?=$this->Html->image('contact.png', ['alt' => 'Send Me A Message'])?>
         </div>
-        <div id="msg-box">
-            <h4>Contact Form</h4>
-            <hr>
-            <input type="text" name="dname" placeholder="Your Name">
-            <input type="text" name="demail" placeholder="Your Email">
-            <h4>Query type</h4>
-            <select>
-                <option>General Query</option>
-                <option>Presales</option>
-                <option>Technical</option>
-                <option>Others</option>
-            </select>
-            <textarea type="text" placeholder="message"></textarea><br>
-            <button>Send Message</button>   
+        <!-- Will add close button,foundation panel and input class -->
+        <div id="msg-box" class="panel">
+            <div class="row">
+                <div class="large-12 medium-12 small-12 columns">
+                    <form action="" method="" name="contact_form">
+                        <fieldset>
+                            <legend>
+                                <div class="row">
+                                    <div class="large-9 small-9 medium-9 columns">
+                                        Contact Us
+                                    </div>
+                                    <div class="large-3 small-3 medium-3 columns" onclick="close_panel()" style="cursor: pointer;text-align: center;">
+                                        &times;
+                                    </div>
+                                </div>
+                            </legend>
+                            <!-- Name Input -->
+                            <div class="row">
+                                <div class="small-12 large-12 medium-12 columns">
+                                    <div class="row">
+                                        <div class="small-3 columns">
+                                            <label for="name" class="right inline">
+                                                Name
+                                            </label>
+                                        </div>
+                                        <div class="small-9 columns">
+                                            <input type="text" name="name" placeholder="John Doe" required/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Email Input -->
+                            <div class="row">
+                                <div class="small-12 large-12 medium-12 columns">
+                                    <div class="row">
+                                        <div class="small-3 columns">
+                                            <label for="email" class="right inline">
+                                                Email
+                                            </label>
+                                        </div>
+                                        <div class="small-9 columns">
+                                            <input type="email" name="email" placeholder="something@example.com" required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message -->
+                            <div class="row">
+                                <div class="small-12 large-12 medium-12 columns">
+                                    <div class="row">
+                                        <div class="small-3 columns">
+                                            <label for="message" class="right inline">
+                                                Message
+                                            </label>
+                                        </div>
+                                        <div class="small-9 columns">
+                                            <textarea placeholder="Your Message" name="msg" rows="5" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" value="Submit" class="button small">Send</button>
+                            <button type="button" value="Reset" class="button small alert">Reset</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 

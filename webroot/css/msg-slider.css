@@ -1,0 +1,40 @@
+#sld{
+	width:464px;
+	top:50px;
+	position:fixed;
+}
+   
+#msg-box{
+	width:306px;
+	/*height:520px;*/
+	position:absolute; 
+	right:0px; 
+	border:1px solid #d8d8d8;
+	/*margin-left:40px;*/
+	padding:0px;
+	border-radius:3px;
+	box-shadow: 0 0 8px gray;
+	background-color: #f9f9f9;
+}
+
+
+#sdb{
+	position:absolute;
+	top:50px;
+	left:113px;
+	box-shadow: 0 0 8px gray;
+	opacity: 0.2;
+	cursor: pointer;
+}
+
+#sdb:hover{
+	opacity: 1;
+}
+
+#sdb1{
+	position:absolute;
+	top:50px;
+	left:113px;
+	box-shadow: 0 0 8px gray;
+	cursor: pointer;
+}
