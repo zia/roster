@@ -180,10 +180,6 @@ $cakeDescription = 'A School Management App Developed Using CakePHP';
 
     <!-- JQuery -->
     <?=$this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')?>
-
-    <!-- foundation js -->
-    <?= $this->Html->script('foundation')?>
-    <?= $this->Html->script('what-input')?>
     
     <!-- Floating contact box-->
     <?= $this->Html->script('msg-slider')?>
